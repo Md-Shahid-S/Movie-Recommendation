@@ -14,7 +14,7 @@ def clean_title(raw_title):
 
 # OMDb API function
 def fetch_poster(movie_title):
-    api_key = "285d78af"  # your OMDb key
+    api_key =  " your OMDb key "
     movie_title = clean_title(movie_title)
     url = f"http://www.omdbapi.com/?t={movie_title}&apikey={api_key}"
     response = requests.get(url)
@@ -54,4 +54,5 @@ if st.button('Recommend'):
     for idx, col in enumerate(cols):
         with col:
             st.text(names[idx])
+
             st.image(posters[idx])
